@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PW3</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"  />     
+    <link rel="stylesheet" href="path/to/font-awesome/css/all.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--indent so its in body tag
+add header tag and add name as logo 
+change contact
+fix portfolio page for responsiveness 
+-->
+<!---------------Home Page--------------->
+<div id="home">
+    <div class="navigation-bar">
+        <ul>
+          <li><a href="#home">home</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#portfolio">portfolio</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </div>
+    <section class="hometext">
+        <h1>Hey, I'm Apiena Selvarajah</h1>
+        <p>A dedicated student of computer science aspiring to become a software engineer</p>
+    </section>
+</div>
+<!--------------About Me-------------------->
+<div id="about">
+    <div class="aboutme">
+        <h1 class="sub-title">ABOUT ME</h1>
+        <div class="content">
+            <img src="IMG_1803.jpg" alt="">
+            <p>I am a first-year computer science student at Toronto Metropolitan University, pursuing my passion for becoming a software engineer. I have a strong passion for exploring innovative technologies, artificial intelligence, and software development. I enjoy listening to music and reading books. When I'm not coding, you can find me outdoors, exploring nature!</p>
+        </div>
+        <h2>TECHNICAL SKILLS</h2>
+        <div class="languages">
+            <h3>Python</h3>
+            <h3>Java</h3>
+            <h3>C</h3>
+            <h3>HTML</h3>
+            <h3>CSS</h3>
+            <h3>JavaScript</h3>
+            <h3>SQL</h3>
+            <h3>Flask</h3>
+        </div>
+    </div>
+</div>
+<!-----------Portfolio----------->
+<div id="portfolio">
+    <div class="portfolio-container">
+        <h1 class="sub-title">PORTFOLIO</h1>
+        <div class="project-list">
+            <div>
+                <i class="fas fa-person"></i>
+                <h2>Hangman</h2>
+                <p>Created an online hangman game using HTML, CSS, and JavaScript. This game enables users to input letters and attempt to guess 
+                    the concealed word. Input validation ensures that only valid entries are accepted.</p>
+                <a href="#">See project</a>
+            </div>
+            <div>
+                <i class="fas fa-link"></i>
+                <h2>URL-Shortener</h2>
+                <p>Developed a URL shortener application using Python, Flask, HTML, CSS, the Cutlery API, and validators. Ensures accurate input 
+                    through validation. Additionally, users can copy the shortened links to their clipboard.</p>
+                <a href="#">See project</a>
+            </div>
+            <div>
+                <i class="fas fa-lock"></i>
+                <h2>Password Generator</h2>
+                <p>Built a password generator application using Java. Users can customize their password length and include characters from various 
+                    categories. The app visually rates password strength and enables easy copying to clipboard.</p>
+                <a href="#">See project</a>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+<!-----------Contact Page------------>
+<div id="contact">
+    <div class="contact-container">
+        <div class="contact-header">
+            <h1 class="sub-title">CONTACT</h1>
+            <p>Feel free to reach out or say hi!</p>
+        </div>
+        <div class="contact-form">
+            <form name="submit-to-google-sheet">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter Name here" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Email here" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Enter Message here" rows="7" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+        <h3 class="msg" id="msg"></h3>
+    </div>
+</div>
+<!-------------Footer----------------->
+<footer class="footer">
+    <div class="footer-content">
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+        <i class="fa-solid fa-phone"></i>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2023. Made by Apiena Selvarajah</p>
+    </div>
+</footer>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzklN55mU97_3kXBVrHNj3vBGNYALQydgb8kRjAuHLU6kKe0A_52kZ0lGIwRnf7DGoV/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+</body>
+</html>
