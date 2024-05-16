@@ -26,8 +26,11 @@ html{
 .navigation-bar {
 position: fixed;
 top: 0;
-right: 30px;
 padding: 10px;
+background-color: #05282E;
+width: 100%;
+display: flex; /* Use flexbox layout */
+justify-content: flex-end; /* Align items to the right */
 }
 
 .navigation-bar ul {
