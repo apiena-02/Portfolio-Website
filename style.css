@@ -262,11 +262,6 @@ input[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
 }
-.msg {
-    text-align: center;
-    color: white;
-    margin-bottom: 20px;
-}
 
 /*------------Footer-------------*/
 .footer {
