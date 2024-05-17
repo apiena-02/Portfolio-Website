@@ -94,7 +94,7 @@ fix portfolio page for responsiveness
             <p>Feel free to reach out or say hi!</p>
         </div>
         <div class="contact-form">
-            <form name="submit-to-google-sheet">
+            <form name="submit-to-google-sheet" netlify>
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter Name here" required>
@@ -126,25 +126,6 @@ fix portfolio page for responsiveness
         <p>&copy; 2024. Made by Apiena Selvarajah</p>
     </div>
 </footer>
-
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzklN55mU97_3kXBVrHNj3vBGNYALQydgb8kRjAuHLU6kKe0A_52kZ0lGIwRnf7DGoV/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully!"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            }, 5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-</script>
 
 </body>
 </html>
