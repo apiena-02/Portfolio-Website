@@ -292,7 +292,9 @@ input[type="submit"] {
     font-size: 12px;
     margin-bottom: 15px;
 }
-
+.navigation-bar .fas{
+    display: none;
+}
 @media only screen and (max-width: 1000px) {
     /* TODO */
     .content {
@@ -325,5 +327,30 @@ input[type="submit"] {
     .content {
         width: 80%;
         padding-right: 20px;
+    }
+    .navigation-bar .fas{
+        display: block;
+        font-size: 20px;
+        color: white;
+    }
+    .navigation-bar ul {
+        background-color: #184C55;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+    }
+    .navigation-bar ul li{
+        display: block;
+        margin: 25px;
+    }
+    .navigation-bar ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
     }
 }
