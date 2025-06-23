@@ -13,15 +13,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
 </head>
 <body>
 <!---------------Home Page--------------->
+<div id="tsparticles"></div>
 <div id="home">
     <div class="navigation-bar">
         <ul id="sidemenu">
           <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#portfolio">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
           <i class="fas fa-x" onclick="closemenu()"></i>
         </ul>
@@ -29,57 +31,56 @@
       </div>
     <section class="hometext">
         <h1>Hi, I'm Apiena Selvarajah</h1>
+        <p>A Computer Science student at Toronto Metropolitan University</p>
     </section>
-</div>
-<!--------------About Me-------------------->
-<div id="about">
-    <div class="aboutme">
-        <h1 class="sub-title">ABOUT ME</h1>
-        <div class="content">
-            <img src="IMG_7269.JPG" alt="">
-            <p>I am a computer science student at Toronto Metropolitan University, pursuing my passion for becoming a software engineer. I have a strong passion for exploring innovative technologies, artificial intelligence, and software development. When I'm not coding, you can find me reading books!</p>
-        </div>
-        <h2>TECHNICAL SKILLS & TOOLS</h2>
-        <div class="languages">
-            <h3>Python</h3>
-            <h3>Java</h3>
-            <h3>HTML</h3>
-            <h3>CSS</h3>
-            <h3>JavaScript</h3>
-            <h3>C</h3>
-            <h3>C++</h3>
-            <h3>SQL</h3>
-            <h3>React</h3>
-            <h3>PyCharm</h3>
-            <h3>IntelliJ</h3>
-            <h3>Eclipse</h3>
-            <h3>Spyder</h3>
-            <h3>VS Code</h3>
-        </div>
+    <div class="technologies">
+        <h3>Python</h3>
+        <h3>SQL</h3>
+        <h3>Pandas</h3>
+        <h3>Microsoft Excel</h3>
+        <h3>Java</h3>
+        <h3>C</h3>
+        <h3>Lisp</h3>
+        <h3>HTML</h3>
+        <h3>CSS</h3>
+        <h3>JavaScript</h3>
+        <h3>Linux</h3>
+        <h3>Bash</h3>
+        <h3>Smalltalk</h3>
+        <h3>Elixir</h3>
+        <h3>Rust</h3>
+        <h3>Assembly</h3>
+        <h3>Git</h3>
     </div>
 </div>
 <!-----------Portfolio----------->
 <div id="portfolio">
     <div class="portfolio-container">
-        <h1 class="sub-title">PORTFOLIO</h1>
+        <h1 class="sub-title">PROJECTS</h1>
         <div class="project-list">
+            <div>
+                <i class="fa-solid fa-dice"></i>
+                <h2>Crag Dice Game</h2>
+                <p>A Python terminal game that simulates Crag dice with built-in data tracking and detailed analysis of gameplay.</p>
+                <a href="https://github.com/apiena-02/Crag-Dice-Game" target="_blank">See project</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-uber"></i>
+                <h2>Uber Simulation App</h2>
+                <p>A Java command-line simulation of an Uber-like ride and delivery platform managing users, drivers, and service requests.</p>
+                <a href="https://github.com/apiena-02/Uber-Simulation-App" target="_blank">See project</a>
+            </div>
             <div>
                 <i class="fas fa-arrow-right-arrow-left"></i>
                 <h2>BaseX</h2>
-                <p>Created a base converter tool using HTML, CSS, JavaScript, and React to convert numbers between different numeral systems.</p>
+                <p>A web app that converts numbers between common numeral systems like binary, decimal, and hexadecimal.</p>
                 <a href="https://github.com/apiena-02/BaseX" target="_blank">See project</a>
             </div>
-            <div>
-                <i class="fas fa-file-audio"></i>
-                <h2>Text to Speech</h2>
-                <p>Developed a Python text-to-speech app using Boto3 and AWS Polly to generate high-quality MP3 audio files .</p>
-                <a href="https://github.com/apiena-02/Text-to-Speech" target="_blank">See project</a>
-            </div>
-            <div>
+             <div>
                 <i class="fas fa-book"></i>
-                <h2>Library Management System</h2>
-                <p>Implemented a Java-based library management system, enabling users to efficiently register, borrow, return, and sort books.</p>
-                <a href="https://github.com/apiena-02/Library-Management-System" target="_blank">See project</a>
+                <h2>Work in Progress</h2>
+                <p>Work in Progress</p>
+                <a>See project</a>
             </div>
         </div>
         <a href="https://github.com/apiena-02" class="btn" target="_blank">See More</a>
@@ -87,52 +88,44 @@
 </div>
 <!-----------Contact Page------------>
 <div id="contact">
-    <div class="contact-container">
-        <div class="contact-header">
-            <h1 class="sub-title">CONTACT</h1>
-            <p>Feel free to reach out or say hi!</p>
-        </div>
-        <div class="contact-form">
-            <form name="contact" action="https://formspree.io/f/xgvevzjn" method="POST">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter Name here" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter Email here" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Enter Message here" rows="7" required></textarea>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Submit">
-                </div>
-            </form>
-        </div>
+  <div class="contact-card">
+    <div class="contact-left">
+        <h2 class="contact-title">Feel free to reach out!</h2>
+        <p class="contact-subtitle">I’d love to connect, whether it’s for a project, an opportunity, or just to say hi.</p>
     </div>
+    <div class="contact-right">
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:apiena1@gmail.com">apiena1@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <a href="tel:4162587589">(416) 258-7589</a>
+      </div>
+      <div class="contact-item">
+        <i class="fab fa-github"></i>
+        <a href="https://github.com/apiena-02" target="_blank">github.com/apiena-02</a>
+      </div>
+      <div class="contact-item">
+        <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/apiena-selvarajah/" target="_blank">linkedin.com/in/apiena-selvarajah</a>
+      </div>
+    </div>
+  </div>
 </div>
+
 <!-------------Footer----------------->
 <footer class="footer">
+    <!-- 
     <div class="footer-content">
         <a href="https://github.com/apiena-02" target="_blank"><i class="fa-brands fa-github"></i></a>
         <a href="https://www.linkedin.com/in/apiena-selvarajah/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-    </div>
+    </div> -->
     <div class="copyright">
         <p>&copy; <span id="year" ></span>. Made by Apiena Selvarajah</p>
     </div>
 </footer>
-<script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    var sidemenu = document.getElementById("sidemenu")
-
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
-</script>
+<script src="script.js"></script>
+   
 </body>
 </html>
